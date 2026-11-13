@@ -1,10 +1,14 @@
 import javax.swing.*;
 import java.awt.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.io.IOException;
+
 
 public class Main extends JFrame {
     public Main(){
         setTitle("alchemik");
-        setSize(900, 650);
+        setSize(1000, 650);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
@@ -62,6 +66,12 @@ public class Main extends JFrame {
         tlo.add(wyjscie);
 
         add(tlo);
+
+        // ascii art
+
+
+
+
     }
     private JButton utworzPrzycisk(String tekst) {
         JButton przycisk = new JButton(tekst);
