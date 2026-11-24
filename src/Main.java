@@ -34,7 +34,7 @@ public class Main extends JFrame {
 
         // Przyciski menu
         JButton start = utworzPrzycisk("Rozpocznij gre");
-        JButton ksiega = utworzPrzycisk("Ksiega skladnikow");
+        JButton ksiega = utworzPrzycisk("Ksiega alchemika");
         JButton wyjscie = utworzPrzycisk("Wyjscie");
 
         // Przejście do wyboru poziomu
@@ -45,12 +45,12 @@ public class Main extends JFrame {
             this.dispose();
         });
 
-        ksiega.addActionListener(e ->
-                JOptionPane.showMessageDialog(
-                        this,
-                        "Tutaj znajdzie sie ksiega pierwiastkow."
-                )
-        );
+        ksiega.addActionListener(e -> {
+            KsięgaAlchemika ksiegaOkno = new KsięgaAlchemika();
+            ksiegaOkno.setVisible(true);
+
+            this.dispose();
+        });
 
         wyjscie.addActionListener(e -> System.exit(0));
 
